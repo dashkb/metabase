@@ -527,7 +527,6 @@
         (nil? result))))
 
 
-
 ;; ## "FIELDS" CLAUSE
 ;; Test that we can restrict the Fields that get returned to the ones specified, and that results come back in the order of the IDs in the `fields` clause
 (qp-expect-with-all-engines

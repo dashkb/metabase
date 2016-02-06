@@ -38,7 +38,9 @@
 (defn- as
   "Generate a FORM `AS` FIELD alias using the name information of FIELD."
   [form field]
-  [form (name field)])
+  (if-let [alias (sql/field->alias (driver) field)]
+    [form alias]
+    form))
 
 
 (defprotocol ^:private IGenericSQLFormattable
